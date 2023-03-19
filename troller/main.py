@@ -75,37 +75,6 @@ import win32com.client
 
 python_path = sys.executable
 code_path = os.path.realpath(__file__)
-print(code_path)
-
-import os
-import shutil
-def add_to_startup():
-# Specify the path to your Python script
-    script_path = code_path
-
-    # Get the path to the startup folder
-    startup_folder = os.path.join(os.environ['APPDATA'], 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-
-    # Copy your Python script to the startup folder as a shortcut
-    shortcut_path = os.path.join(startup_folder, 'MyScript.lnk')
-    target_path = os.path.splitext(script_path)[0] + '.py'
-    shell = win32com.client.Dispatch("WScript.Shell")
-    shortcut = shell.CreateShortCut(shortcut_path)
-    shortcut.Targetpath = target_path
-    shortcut.WorkingDirectory = os.path.dirname(script_path)
-    shortcut.save()
-    import subprocess
-
-    # Change the code page to UTF-8
-    subprocess.call('chcp 65001', shell=True)
-
-
-# Add the Python script to startup
-script_path = sys.argv[0]
-add_to_startup()
-
-# Your code to run the video goes here...
-
 # run the code
 th1 = threading.Thread(target=play_video)
 #th1.start()
