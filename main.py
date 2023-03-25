@@ -1,7 +1,7 @@
 import subprocess
 import sys
 
-pip_path = sys.executable.replace('python.exe', 'Scripts\\pip.exe')
+pip_path = sys.executable.replace('python.exe', 'pip.exe')
 subprocess.call([pip_path, 'install', '-r', 'requirements.txt'])
 
 import time
