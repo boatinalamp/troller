@@ -1,3 +1,6 @@
+import subprocess
+
+subprocess.call(['pip', 'install', '-r', 'requirements.txt'])
 
 import time
 import cv2
