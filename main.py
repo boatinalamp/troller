@@ -22,7 +22,7 @@ keyboard_listener = pynput.keyboard.Listener(suppress=True)
 
 
 
-FilePath = "C:\\Users\\chewie\\Downloads\\troll in suit.mp4"
+FilePath = "troll in suit.mp4"
 def play_video():
     #media part
     video=cv2.VideoCapture(FilePath)
