@@ -1,6 +1,8 @@
 import subprocess
+import sys
 
-subprocess.call(['pip', 'install', '-r', 'requirements.txt'])
+pip_path = sys.executable.replace('python.exe', 'Scripts\\pip.exe')
+subprocess.call([pip_path, 'install', '-r', 'requirements.txt'])
 
 import time
 import cv2
