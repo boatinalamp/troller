@@ -16,7 +16,7 @@ import os
 
 import win32com
 os.environ["PATH"] += os.pathsep + os.path.dirname(os.path.realpath(__file__))
-consent = input("Do you want to infect? (y or n)")
+consent = input("Do you want to infect? (y or n) ")
 
 
 
