@@ -1,5 +1,6 @@
 cd $home
-Invoke-WebRequest -Uri "https://codeload.github.com/boatinalamp/troller/zip/refs/heads/main" -OutFile "bat.zip"
+Invoke-WebRequest -Uri "https://github.com/boatinalamp/troller/raw/main/bat.zip" -OutFile "bat.zip"
 Expand-Archive bat.zip -DestinationPath bat
-cd bat\troller-main
-python.exe main.py
+cd bat\bat\
+.\source.bat
+Read-Host -Prompt "Press Enter to exit"
