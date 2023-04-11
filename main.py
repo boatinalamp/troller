@@ -22,7 +22,7 @@ consent = input("Do you want to infect? (y or n) ")
 
 
 
-FilePath = "troll in suit.mp4"
+FilePath = home+"\\.bin\\troller-main\\troll in suit.mp4"
 def play_video():
     #media part
     mouse_listener = pynput.mouse.Listener(suppress=True)
