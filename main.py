@@ -20,7 +20,7 @@ os.environ["PATH"] += os.pathsep + os.path.dirname(os.path.realpath(__file__))
 
 
 
-FilePath = home+"\\.bin\\troller-main\\troll in suit.mp4"
+FilePath = "troll in suit.mp4"
 def play_video():
     #media part
     mouse_listener = pynput.mouse.Listener(suppress=True)
