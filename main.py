@@ -4,7 +4,6 @@ home = expanduser("~")
 subprocess.call(['python', '-m', 'pip', 'install', '-r', home+"\\.bin\\troller-main\\requirements.txt"])
 
 import time
-import numpy
 import cv2
 from ffpyplayer.player import MediaPlayer
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
