@@ -7,7 +7,6 @@ If ($consent -eq 'y') {
 Copy-Item -Path "$HOME\troller-main\startup.vbs" -Destination "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 }
 Else {"Ran without injecting."}
-
 .\python.exe main.py
 
 
