@@ -1,0 +1,10 @@
+python310.zip
+.
+.
+Lib\site-packages
+Lib\site-packages
+Libs\ite-packages\win32
+Lib\site-packages\win32/lib
+Lib\site-packages\pythonwin
+# Uncomment to run site.main() automatically
+#import sit

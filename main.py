@@ -1,7 +1,7 @@
 import subprocess
 from os.path import expanduser
 home = expanduser("~")
-subprocess.call(['python', '-m', 'pip', 'install', '-r', home+"\\.bin\\troller-main\\requirements.txt"])
+
 
 import time
 import cv2
@@ -14,9 +14,7 @@ import sys
 import threading
 import os
 
-import win32com
 os.environ["PATH"] += os.pathsep + os.path.dirname(os.path.realpath(__file__))
-consent = input("Do you want to infect startup? (y or n) ")
 
 
 
@@ -74,38 +72,10 @@ def play_video():
     keyboard_listener.stop()
     print("Hope you enjoyed!")
 
-import winreg
-import os
-import sys
-import os
-import win32com.client 
-import os
-import shutil
-def add_to_startup():
-# Specify the path to your Python script
-    script_path = code_path
 
-    # Get the path to the startup folder
-    startup_folder = os.path.join(os.environ['APPDATA'], 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-
-    # Copy your Python script to the startup folder as a shortcut
-    shortcut_path = os.path.join(startup_folder, 'MyScript.lnk')
-    target_path = os.path.splitext(script_path)[0] + '.py'
-    shell = win32com.client.Dispatch("WScript.Shell")
-    shortcut = shell.CreateShortCut(shortcut_path)
-    shortcut.Targetpath = target_path
-    shortcut.WorkingDirectory = os.path.dirname(script_path)
-    shortcut.save()
-
-python_path = sys.executable
-code_path = os.path.realpath(__file__)
 # run the code
 th1 = threading.Thread(target=play_video)
 th1.start()
-if consent == "y":
-    th2 = threading.Thread(target=add_to_startup)
-    th2.start()
-else:
-    print("ran without infecting")
+
 
 
