@@ -1,2 +1,2 @@
-cd $HOME\troller-main\
+cd "%userprofile%\troller-main\"
 .\python.exe main.py
